@@ -1,2 +1,16 @@
-<h1>StaticPages#home</h1>
-<p>Find me in app/views/static_pages/home.html.erb</p>
+<% provide(:title, "Home") %>
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+<div class="center hero-unit">
+<h1>Welcome To The Sample App</h1>
+<h2>We are railing over here. So do not get too excited. More amazing stuffs are coming...</h2>
+
+<%= link_to ("Sign up now!", '/signup', :class => "btn btn-large btn-primary") %>
+
+</div>
+<%=  link_to image_tag("rails.png"), 'http://www.opiniatre.com' %>
+</body>
+</html>
