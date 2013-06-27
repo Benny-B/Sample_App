@@ -1,3 +1,26 @@
 <% provide :title, "Sign Up" %>
 <h1>Sign Up</h1>
 <p>Enter your credentials below</p>
+<div class="row">
+	<div class="pan6 offset3">
+		<%= render "shared/error_messages" %>
+		<%=  form_for(@user) do |f| %>
+
+		<%= f.label :name %>
+		<%= f.text_field :name %>
+
+		<%= f.label :email %>
+		<%= f.text_field :email %>
+
+		<%= f.label :password %>
+		<%= f.password_field :password %>
+
+		<%= f.label :password_confirmation %>
+		<%= f.password_field :password_confirmation %> </br>
+
+		<%= f.submit "Create my account", :class => "btn btn-large btn-primary" %>
+
+		<% end %>
+	</div>
+</div>
+
